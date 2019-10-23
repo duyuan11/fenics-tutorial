@@ -55,8 +55,9 @@ plot(u)
 # an alternative to using compute_vertex_values as in poisson.py.
 u_e = interpolate(u_D, V)
 import numpy as np
-error_max = np.abs(u_e.vector().array() - u.vector().array()).max()
+import matplotlib.pyplot as plt
+error_max = np.abs(u_e.vector().get_local() - u.vector().get_local()).max()
 print('error_max = ', error_max)
 
 # Hold plot
-interactive()
+plt.show()

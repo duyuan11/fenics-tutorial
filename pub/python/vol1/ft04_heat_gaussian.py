@@ -63,5 +63,6 @@ for n in range(num_steps):
     # Update previous solution
     u_n.assign(u)
 
+import  matplotlib.pyplot as plt
 # Hold plot
-interactive()
+plt.show()
